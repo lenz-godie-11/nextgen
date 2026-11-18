@@ -23,9 +23,7 @@ export function Hero() {
           <div className="hero__actions">
             <a className="btn btn--primary" href="#projects">
               Explore Our Work
-              <span className="btn__arrow" aria-hidden="true">
-                →
-              </span>
+              
             </a>
             <a className="btn btn--ghost" href="#contact">
               Get in Touch

@@ -43,9 +43,7 @@ export function Header() {
 
         <a className="btn btn--primary nav__cta" href="#contact">
           Let&apos;s Talk
-          <span className="btn__arrow" aria-hidden="true">
-            →
-          </span>
+          
         </a>
 
         <button
@@ -79,9 +77,7 @@ export function Header() {
               onClick={() => setOpen(false)}
             >
               Let&apos;s Talk
-              <span className="btn__arrow" aria-hidden="true">
-                →
-              </span>
+              
             </a>
           </nav>
         </div>

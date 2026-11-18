@@ -50,9 +50,7 @@ export function Footer() {
           <span>
             © {currentYear} {brand.name}. All rights reserved.
           </span>
-          <a className="footer__top-link" href="#home">
-            Back to top <span aria-hidden="true">↑</span>
-          </a>
+          
         </div>
       </div>
     </footer>

@@ -74,10 +74,8 @@ export function Contact() {
               </p>
               <button type="submit" className="btn btn--primary">
                 Send Message
-                <span className="btn__arrow" aria-hidden="true">
-                  →
-                </span>
               </button>
+              
               {submitted ? (
                 <p className="form__status" role="status">
                   Message draft captured locally. Add a backend or form service to deliver
