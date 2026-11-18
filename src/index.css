@@ -1,7 +1,7 @@
 /* ============================================================
    NEXT GEN INNOVATORS — Design System
    Miro-inspired: bold type, black/white/neutral canvas,
-   strong yellow accent, geometric composition.
+   strong green accent, geometric composition.
    ============================================================ */
 
 /* ---------- Design tokens ---------- */
@@ -18,9 +18,9 @@
   --gray: #6b6b6b;
   --gray-2: #9a978d;
 
-  --yellow: #ffd02f;
-  --yellow-2: #f5b800;
-  --yellow-soft: rgba(255, 208, 47, 0.18);
+  --green: #22c55e;
+  --green-2: #16a34a;
+  --green-soft: rgba(34, 197, 94, 0.18);
   --navy: #002866;
   --cyan: #01cafe;
   --pink: #fd2e5c;
@@ -99,12 +99,12 @@ textarea {
 }
 
 ::selection {
-  background: var(--yellow);
+  background: var(--green);
   color: var(--ink);
 }
 
 :focus-visible {
-  outline: 3px solid var(--yellow-2);
+  outline: 3px solid var(--green-2);
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -131,8 +131,8 @@ textarea {
   color: var(--white);
 }
 
-.section--yellow {
-  background: var(--yellow);
+.section--green {
+  background: var(--green);
   color: var(--ink);
 }
 
@@ -196,7 +196,7 @@ p {
   width: 0.6rem;
   height: 0.6rem;
   border-radius: 999px;
-  background: var(--yellow-2);
+  background: var(--green-2);
 }
 
 .section--ink .eyebrow {
@@ -204,7 +204,7 @@ p {
 }
 
 .section--ink .eyebrow::before {
-  background: var(--yellow);
+  background: var(--green);
 }
 
 .section-head {
@@ -240,7 +240,7 @@ p {
   right: -0.1em;
   bottom: 0.02em;
   height: 0.34em;
-  background: var(--yellow);
+  background: var(--green);
   z-index: -1;
   border-radius: 3px;
 }
@@ -278,14 +278,14 @@ p {
 }
 
 .btn--primary {
-  background: var(--yellow);
+  background: var(--green);
   color: var(--ink);
-  box-shadow: 0 14px 30px -14px rgba(245, 184, 0, 0.9);
+  box-shadow: 0 14px 30px -14px rgba(34, 197, 94, 0.9);
 }
 
 .btn--primary:hover {
-  background: var(--yellow-2);
-  box-shadow: 0 20px 40px -16px rgba(245, 184, 0, 0.95);
+  background: var(--green-2);
+  box-shadow: 0 20px 40px -16px rgba(34, 197, 94, 0.95);
 }
 
 .btn--dark {
@@ -314,7 +314,7 @@ p {
 }
 
 .btn--light:hover {
-  background: var(--yellow);
+  background: var(--green);
 }
 
 /* ---------- Cards ---------- */
@@ -411,7 +411,7 @@ p {
   bottom: 0.3rem;
   height: 2.5px;
   border-radius: 999px;
-  background: var(--yellow-2);
+  background: var(--green-2);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform var(--dur) var(--ease);
@@ -554,7 +554,7 @@ p {
   right: -0.04em;
   bottom: 0.06em;
   height: 0.32em;
-  background: var(--yellow);
+  background: var(--green);
   z-index: -1;
   border-radius: 4px;
 }
@@ -622,7 +622,7 @@ p {
 
 .hero__shape--blob {
   inset: 8% 6% 12% 10%;
-  background: var(--yellow);
+  background: var(--green);
   border-radius: 46% 54% 58% 42% / 52% 44% 56% 48%;
   animation: morph 14s ease-in-out infinite;
 }
@@ -754,7 +754,7 @@ p {
   width: 0.6rem;
   height: 0.6rem;
   border-radius: 999px;
-  background: var(--yellow-2);
+  background: var(--green-2);
 }
 
 /* ---------- About ---------- */
@@ -809,7 +809,7 @@ p {
   width: 140px;
   height: 140px;
   border-radius: 999px;
-  background: var(--yellow);
+  background: var(--green);
   opacity: 0.9;
 }
 
@@ -845,7 +845,7 @@ p {
   height: 0.7rem;
   margin-top: 0.4rem;
   border-radius: 3px;
-  background: var(--yellow);
+  background: var(--green);
   flex: none;
 }
 
@@ -872,7 +872,7 @@ p {
 
 .flow__step:hover {
   transform: translateY(-6px);
-  border-color: rgba(255, 208, 47, 0.6);
+  border-color: rgba(34, 197, 94, 0.6);
 }
 
 .flow__num {
@@ -880,7 +880,7 @@ p {
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.1em;
-  color: var(--yellow);
+  color: var(--green);
 }
 
 .flow__title {
@@ -902,7 +902,7 @@ p {
   top: 2.1rem;
   right: -0.9rem;
   z-index: 2;
-  color: var(--yellow);
+  color: var(--green);
   font-size: 1.1rem;
   line-height: 1;
 }
@@ -911,7 +911,7 @@ p {
   margin-top: 1.5rem;
   padding: 1.3rem 1.6rem;
   border-radius: var(--radius);
-  background: var(--yellow);
+  background: var(--green);
   color: var(--ink);
   display: flex;
   flex-wrap: wrap;
@@ -959,7 +959,7 @@ p {
 }
 
 .vm__panel--vision {
-  background: var(--yellow);
+  background: var(--green);
   color: var(--ink);
 }
 
@@ -984,7 +984,7 @@ p {
 }
 
 .vm__panel--mission .vm__label {
-  color: var(--yellow);
+  color: var(--green);
 }
 
 .vm__label::before {
@@ -1041,8 +1041,8 @@ p {
   height: 2px;
   background: linear-gradient(
     90deg,
-    var(--yellow) 0%,
-    var(--yellow) 60%,
+    var(--green) 0%,
+    var(--green) 60%,
     rgba(255, 255, 255, 0.15) 60%
   );
   z-index: 0;
@@ -1066,8 +1066,8 @@ p {
   height: 3rem;
   border-radius: 999px;
   background: var(--ink-2);
-  border: 2px solid var(--yellow);
-  color: var(--yellow);
+  border: 2px solid var(--green);
+  color: var(--green);
   font-family: var(--font-display);
   font-weight: 700;
   font-size: 1rem;
@@ -1077,7 +1077,7 @@ p {
 
 .journey__step:hover .journey__num {
   transform: scale(1.12);
-  background: var(--yellow);
+  background: var(--green);
   color: var(--ink);
 }
 
@@ -1128,7 +1128,7 @@ p {
 }
 
 .value-row:hover .value-row__num {
-  color: var(--yellow);
+  color: var(--green);
   -webkit-text-stroke: 1.5px var(--ink);
 }
 
@@ -1197,7 +1197,7 @@ p {
 
 .project-card__media--b {
   background:
-    radial-gradient(circle at 70% 30%, rgba(255, 208, 47, 0.95), transparent 55%),
+    radial-gradient(circle at 70% 30%, rgba(34, 197, 94, 0.95), transparent 55%),
     radial-gradient(circle at 25% 80%, rgba(1, 202, 254, 0.7), transparent 55%),
     var(--ink);
 }
@@ -1205,7 +1205,7 @@ p {
 .project-card__media--c {
   background:
     radial-gradient(circle at 40% 70%, rgba(253, 46, 92, 0.85), transparent 55%),
-    radial-gradient(circle at 80% 20%, rgba(255, 208, 47, 0.85), transparent 55%),
+    radial-gradient(circle at 80% 20%, rgba(34, 197, 94, 0.85), transparent 55%),
     var(--ink);
 }
 
@@ -1308,7 +1308,7 @@ p {
   width: 2.6rem;
   height: 2.6rem;
   border-radius: 12px;
-  background: var(--yellow);
+  background: var(--green);
   color: var(--ink);
   font-weight: 700;
   font-family: var(--font-display);
@@ -1378,7 +1378,7 @@ p {
 .field textarea:focus {
   border-color: var(--ink);
   background: var(--white);
-  box-shadow: 0 0 0 4px var(--yellow-soft);
+  box-shadow: 0 0 0 4px var(--green-soft);
   outline: none;
 }
 
@@ -1408,7 +1408,7 @@ p {
   width: 0.7rem;
   height: 0.7rem;
   border-radius: 999px;
-  background: var(--yellow);
+  background: var(--green);
   flex: none;
 }
 
@@ -1476,7 +1476,7 @@ p {
 }
 
 .footer__nav a:hover {
-  color: var(--yellow);
+  color: var(--green);
 }
 
 .footer__wordmark {
