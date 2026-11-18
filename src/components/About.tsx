@@ -4,27 +4,34 @@ export function About() {
   return (
     <section className="section" id="about" aria-labelledby="about-title">
       <div className="container">
-        <div className="section__heading">
-          <p className="section__eyebrow">About Us</p>
-          <h2 id="about-title">A problem-solving startup built for meaningful impact</h2>
+        <div className="section-head">
+          <p className="eyebrow">About us</p>
+          <h2 id="about-title" className="h2">
+            A problem-solving startup built for <span className="highlight">meaningful impact</span>
+          </h2>
         </div>
+
         <div className="about__grid">
-          <article className="card about__panel">
-            <p className="lead">{brand.description}</p>
-            <p style={{ marginTop: '1rem' }}>
+          <div className="about__body">
+            <div className="about__index" aria-hidden="true">
+              01
+            </div>
+            <p className="about__statement">{brand.description}</p>
+            <p className="muted">
               We exist to observe the challenges around us, understand where opportunity lives inside
               those challenges, and use technology to build solutions that are practical, useful, and
               scalable. Our work is guided by curiosity, creativity, and a commitment to creating
               measurable value.
             </p>
-            <p style={{ marginTop: '1rem' }}>{brand.belief}</p>
-          </article>
-          <aside className="card about__panel about__panel--accent">
+            <p className="muted">{brand.belief}</p>
+          </div>
+
+          <aside className="about__side">
             <h3>Why we exist</h3>
-            <p style={{ marginTop: '0.75rem' }}>
-              NEXT GEN INNOVATORS identifies real-world challenges and transforms them into practical
-              technology solutions. We see difficult problems not as dead ends, but as opportunities
-              for innovation, progress, and impact.
+            <p>
+              NEXT GEN INNOVATORS transforms real-world challenges into practical technology
+              solutions. We see difficult problems not as dead ends, but as opportunities for
+              innovation, progress, and impact.
             </p>
             <ul className="about__list">
               <li>Identify meaningful real-world problems.</li>

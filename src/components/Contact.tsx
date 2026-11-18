@@ -1,5 +1,11 @@
 import { useState, type FormEvent } from 'react'
 
+const details = [
+  { icon: '@', label: 'Email', value: 'Official email address (placeholder)' },
+  { icon: '#', label: 'Phone', value: 'Official phone number (placeholder)' },
+  { icon: '◎', label: 'Location', value: 'Official location / address (placeholder)' },
+]
+
 export function Contact() {
   const [submitted, setSubmitted] = useState(false)
 
@@ -11,40 +17,38 @@ export function Contact() {
   return (
     <section className="section" id="contact" aria-labelledby="contact-title">
       <div className="container">
-        <div className="section__heading">
-          <p className="section__eyebrow">Contact Us</p>
-          <h2 id="contact-title">Let&apos;s explore problems worth solving</h2>
-          <p className="lead" style={{ marginTop: '0.85rem' }}>
-            Reach out to learn more about NEXT GEN INNOVATORS, discuss ideas, or connect around
-            future innovation opportunities.
-          </p>
-        </div>
+        <div className="contact">
+          <div className="contact__intro">
+            <div className="section-head" style={{ marginBottom: 0 }}>
+              <p className="eyebrow">Contact us</p>
+              <h2 id="contact-title" className="contact__title">
+                Let&apos;s explore problems worth <span className="highlight">solving</span>
+              </h2>
+              <p className="lead">
+                Reach out to learn more about NEXT GEN INNOVATORS, discuss ideas, or connect around
+                future innovation opportunities.
+              </p>
+            </div>
 
-        <div className="contact-grid">
-          <aside className="card contact-panel">
-            <h3>Company contact details</h3>
-            <p className="muted" style={{ marginTop: '0.6rem' }}>
-              Contact information below uses placeholders until official company details are
-              confirmed.
+            <div className="contact__details">
+              {details.map((item) => (
+                <div className="contact__item" key={item.label}>
+                  <span className="contact__item-icon" aria-hidden="true">
+                    {item.icon}
+                  </span>
+                  <span>
+                    <span className="contact__item-label">{item.label}</span>
+                    <span className="contact__item-value">{item.value}</span>
+                  </span>
+                </div>
+              ))}
+            </div>
+            <p className="contact__note">
+              Contact details use placeholders until official company information is confirmed.
             </p>
-            <ul className="contact-list" aria-label="Contact placeholders">
-              <li className="contact-item">
-                <span className="contact-item__label">Email</span>
-                <span className="contact-item__value">Official email address (placeholder)</span>
-              </li>
-              <li className="contact-item">
-                <span className="contact-item__label">Phone</span>
-                <span className="contact-item__value">Official phone number (placeholder)</span>
-              </li>
-              <li className="contact-item">
-                <span className="contact-item__label">Location</span>
-                <span className="contact-item__value">Official location / address (placeholder)</span>
-              </li>
-            </ul>
-          </aside>
+          </div>
 
-          <div className="card contact-form">
-            <h3>Send a message</h3>
+          <div className="contact__form-wrap">
             <form className="form" onSubmit={onSubmit}>
               <div className="form__row">
                 <div className="field">
@@ -70,6 +74,9 @@ export function Contact() {
               </p>
               <button type="submit" className="btn btn--primary">
                 Send Message
+                <span className="btn__arrow" aria-hidden="true">
+                  →
+                </span>
               </button>
               {submitted ? (
                 <p className="form__status" role="status">

@@ -29,18 +29,21 @@ export function Values() {
   return (
     <section className="section" id="values" aria-labelledby="values-title">
       <div className="container">
-        <div className="section__heading">
-          <p className="section__eyebrow">Our Values</p>
-          <h2 id="values-title">The personality behind NEXT GEN INNOVATORS</h2>
+        <div className="section-head">
+          <p className="eyebrow">Our values</p>
+          <h2 id="values-title" className="h2">
+            The personality behind NEXT GEN INNOVATORS
+          </h2>
         </div>
-        <div className="values-grid">
-          {values.map((value) => (
-            <article key={value.title} className="card value-card">
-              <div className="value-card__marker" aria-hidden="true" />
-              <h3>{value.title}</h3>
-              <p className="muted" style={{ marginTop: '0.45rem' }}>
-                {value.description}
-              </p>
+
+        <div className="values-list">
+          {values.map((value, index) => (
+            <article className="value-row" key={value.title}>
+              <span className="value-row__num" aria-hidden="true">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+              <h3 className="value-row__title">{value.title}</h3>
+              <p className="value-row__desc">{value.description}</p>
             </article>
           ))}
         </div>

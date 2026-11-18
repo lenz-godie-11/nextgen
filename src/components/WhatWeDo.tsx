@@ -1,43 +1,64 @@
 const steps = [
-  { title: 'Problem', text: 'Observe real challenges and understand what people need.', tone: 'orange', icon: '01' },
-  { title: 'Idea', text: 'Explore possibilities with curiosity and creative thinking.', tone: 'pink', icon: '02' },
-  { title: 'Technology', text: 'Apply the right tools, systems, and technical knowledge.', tone: 'blue', icon: '03' },
-  { title: 'Solution', text: 'Build practical, usable, and scalable solutions.', tone: 'navy', icon: '04' },
-  { title: 'Impact', text: 'Create measurable value for people and society.', tone: 'mix', icon: '05' },
+  {
+    title: 'Problem',
+    text: 'Observe real challenges and understand what people need.',
+  },
+  {
+    title: 'Idea',
+    text: 'Explore possibilities with curiosity and creative thinking.',
+  },
+  {
+    title: 'Technology',
+    text: 'Apply the right tools, systems, and technical knowledge.',
+  },
+  {
+    title: 'Solution',
+    text: 'Build practical, usable, and scalable solutions.',
+  },
+  {
+    title: 'Impact',
+    text: 'Create measurable value for people and society.',
+  },
 ]
 
 export function WhatWeDo() {
   return (
-    <section className="section section--alt" id="what-we-do" aria-labelledby="whatwedo-title">
+    <section className="section section--ink" id="what-we-do" aria-labelledby="whatwedo-title">
       <div className="container">
-        <div className="section__heading">
-          <p className="section__eyebrow">What We Do</p>
-          <h2 id="whatwedo-title">We turn real-world problems into practical technology solutions</h2>
-          <p className="lead" style={{ marginTop: '0.85rem' }}>
-            Our approach is not limited to one technology, programming language, or industry. We
-            choose the methods and tools that best fit the problem, the users, and the impact we
-            want to create.
-          </p>
+        <div className="section-head section-head--split">
+          <div>
+            <p className="eyebrow">What we do</p>
+            <h2 id="whatwedo-title" className="h2">
+              From real-world problems to real, working technology
+            </h2>
+          </div>
+          <div>
+            <p className="lead">
+              Our approach isn&apos;t limited to one technology, language, or industry. We choose the
+              methods and tools that best fit the problem, the users, and the impact we want to
+              create.
+            </p>
+          </div>
         </div>
 
-        <div className="process-flow" role="list" aria-label="Problem to impact process">
+        <div className="flow">
           {steps.map((step, index) => (
-            <article key={step.title} className="card process-step" role="listitem">
-              <div className={`process-step__icon process-step__icon--${step.tone}`} aria-hidden="true">
-                {step.icon}
-              </div>
-              <h3>{step.title}</h3>
-              <p className="muted" style={{ marginTop: '0.45rem' }}>
-                {step.text}
-              </p>
-              {index < steps.length - 1 ? <div className="process-step__arrow" aria-hidden="true">→</div> : null}
+            <article className="flow__step" key={step.title}>
+              <span className="flow__num">{String(index + 1).padStart(2, '0')}</span>
+              <h3 className="flow__title">{step.title}</h3>
+              <p className="flow__text">{step.text}</p>
+              {index < steps.length - 1 ? (
+                <span className="flow__connector" aria-hidden="true">
+                  →
+                </span>
+              ) : null}
             </article>
           ))}
         </div>
 
-        <div className="card formula" aria-label="Innovation formula">
-          <span>Problem</span> + <span>Idea</span> + <span>Technology</span> = <span>Solution</span> →{' '}
-          <span>Impact</span>
+        <div className="flow__bar" aria-label="Innovation formula">
+          <span>Problem</span> <b>+</b> <span>Idea</span> <b>+</b> <span>Technology</span>{' '}
+          <b>=</b> <span>Solution</span> <b>→</b> <span>Impact</span>
         </div>
       </div>
     </section>
