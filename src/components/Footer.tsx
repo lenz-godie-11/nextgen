@@ -1,6 +1,8 @@
 import { brand } from '../data'
 
-const footerLinks = [
+const currentYear = new Date().getFullYear()
+
+const exploreLinks = [
   { href: '#about', label: 'About' },
   { href: '#what-we-do', label: 'What We Do' },
   { href: '#vision-mission', label: 'Vision & Mission' },
@@ -15,26 +17,28 @@ export function Footer() {
     <footer className="site-footer">
       <div className="container">
         <div className="footer__top">
-          <div>
+          <div className="footer__brand-col">
             <div className="footer__brand">
               <img src={brand.logo} alt="NEXT GEN INNOVATORS logo" />
               <div>
-                <div className="footer__title">{brand.name}</div>
+                <h2 className="footer__title">{brand.name}</h2>
                 <div className="footer__tag">{brand.tagline}</div>
               </div>
             </div>
-            <p className="footer__desc">
-              A technology-driven startup focused on transforming real-world problems into practical,
-              innovative, and scalable solutions.
-            </p>
+            <p className="footer__desc">{brand.description}</p>
           </div>
 
-          <nav className="footer__nav" aria-label="Footer">
-            {footerLinks.map((link) => (
-              <a href={link.href} key={link.href}>
-                {link.label}
-              </a>
-            ))}
+          <nav className="footer__nav" aria-labelledby="footer-explore">
+            <h3 className="footer__heading" id="footer-explore">
+              Explore
+            </h3>
+            <div className="footer__links">
+              {exploreLinks.map((link) => (
+                <a href={link.href} key={link.href}>
+                  {link.label}
+                </a>
+              ))}
+            </div>
           </nav>
         </div>
 
@@ -43,8 +47,12 @@ export function Footer() {
         </div>
 
         <div className="footer__bottom">
-          <span>© 2026 {brand.name}. All rights reserved.</span>
-          <span>Turning Impossible into Possible.</span>
+          <span>
+            © {currentYear} {brand.name}. All rights reserved.
+          </span>
+          <a className="footer__top-link" href="#home">
+            Back to top <span aria-hidden="true">↑</span>
+          </a>
         </div>
       </div>
     </footer>
